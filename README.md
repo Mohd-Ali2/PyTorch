@@ -19,8 +19,8 @@ Make sure you have the following installed:
 - **PyTorch (>=1.7)**
 - **NumPy**
 
-
-      +-------------------------+
+### Visual Overview of the Process
++
       |     Input Data          |
       | (Tensors, features, etc)|
       +------------+------------+
