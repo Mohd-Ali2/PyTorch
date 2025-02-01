@@ -19,7 +19,39 @@ Make sure you have the following installed:
 - **PyTorch (>=1.7)**
 - **NumPy**
 
-You can install the required dependencies using pip:
 
-```bash
-pip install torch numpy
+      +-------------------------+
+      |     Input Data          |
+      | (Tensors, features, etc)|
+      +------------+------------+
+                   |
+                   v
+      +-------------------------+
+      |   Neural Network Model  |   <-- Built using nn.Module
+      |  (Layers, Activation)   |
+      +------------+------------+
+                   |
+                   v
+      +-------------------------+
+      |   Forward Pass          |  <-- Input data flows through the model
+      +------------+------------+
+                   |
+                   v
+      +-------------------------+
+      |   Loss Calculation      |  <-- Compare model output to target values
+      +------------+------------+
+                   |
+                   v
+      +-------------------------+
+      |   Backward Pass         |  <-- Compute gradients using autograd
+      +------------+------------+
+                   |
+                   v
+      +-------------------------+
+      |   Parameter Update      |  <-- Use optimizer (e.g., Adam) to update weights
+      +-------------------------+
+                   |
+                   v
+      +-------------------------+
+      |   Next Epoch / Model    |  <-- Repeat the training loop until convergence
+      +-------------------------+
